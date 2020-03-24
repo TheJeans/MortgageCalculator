@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 /**
- * This is the main class for "Mortgage Calculator"
+ * This is the first attempt at a "Mortgage Calculator"
  * It takes the inputs from the user and calculates the mortgage at the end of the questions.
  */
 
-public class Main {
+public class MortgageCalc {
 
     public static void main(String[] args) {
 
