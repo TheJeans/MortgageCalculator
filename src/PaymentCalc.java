@@ -18,17 +18,10 @@ public class PaymentCalc {
         /**
          * Collect inputs from user
          */
-        System.out.print("What is the principal?: $");
-        Scanner principalInput = new Scanner(System.in);
-        int principal = principalInput.nextInt();
+        int principal = (int) readNumber("What is the principal?: $", 1000, 1_000_000);
+        double interest = readNumber("What is the annual interest rate?: ", 1, 30);
+        int years = (int) readNumber("What is the period (in years)?: ", 1, 30);
 
-        System.out.print("What is the annual interest rate?: ");
-        Scanner interestInput = new Scanner(System.in);
-        double interest = interestInput.nextDouble();
-
-        System.out.print("What is the period (in years)?: ");
-        Scanner yearsInput = new Scanner(System.in);
-        int years = yearsInput.nextInt();
 
         /**
          * Call methods and display answers
@@ -37,6 +30,19 @@ public class PaymentCalc {
         printPaymentSchedule(principal, interest, years);
 
 
+    }
+
+    public static double readNumber(String prompt, double min, double max){
+        Scanner input = new Scanner(System.in);
+        double value;
+        while (true) {
+            System.out.print(prompt);
+            value = input.nextFloat();
+            if (value >= min && value <= max)
+                break;
+            System.out.println("Enter a value between " + min + " and " + max);
+        }
+        return value;
     }
 
     public static void printMortgage(int principal, double interest, int years){
