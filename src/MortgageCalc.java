@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 /**
+ * PT 1
  * This is the first attempt at a "Mortgage Calculator"
  * It takes the inputs from the user and calculates the mortgage at the end of the questions.
  */

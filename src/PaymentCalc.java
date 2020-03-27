@@ -2,6 +2,7 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 /**
+ * PT 2
  * Further continuation of "Mortgage Calculator"
  * It takes the inputs from the user and calculates the mortgage at the end of the questions.
  * Then it calculates and displays the monthly payments as well as a payment schedule that shows
